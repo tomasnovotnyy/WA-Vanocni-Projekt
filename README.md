@@ -25,7 +25,7 @@
 - Ukládání přihlašovacích údajů:
   - Stránka obsahuje skript saveCredentials(), který ukládá přihlašovací údaje do lokálního úložiště pro případné pozdější použití. Tento skript je volán při kliknutí na tlačítko "Login" nebo "Register".
 
-</br></br>
+
 
 # *chat.php*
 ## *Popis*
@@ -42,7 +42,7 @@ Stránka obsahuje:
 - sendMessage(chatId): Odešle zprávu od uživatele do chatu s ID chatId.
 - sendMessageToOtherChat(currentChatId, message): Odešle kopii zprávy do druhého chatu.
 
-</br></br>
+
 
 # *api.php*
 ## *Popis*
@@ -60,7 +60,7 @@ Tento PHP soubor slouží jako API controller pro mou webovou aplikaci "ChatZone
 - Neimplementovaná funkcionalita:
   - Bohužel se mi nepodařilo tento soubor implementovat do mé webové aplikace. Pokusil jsem se vytvořit funkcionalitu pro získání zpráv podle zadaných kritérií, ale soubor jsem nakonec ve finální verzi aplikace nepoužil.
 
-</br></br>
+
 
 # *registerme.php*
 ## *Popis*
@@ -83,7 +83,7 @@ Tento soubor slouží jako backendový skript pro zpracování registrace uživa
 - Chybové zprávy:
   - Poskytuje odpovídající chybové zprávy v případě neúspěšného získání dat nebo zápisu do souboru.
 
-</br></br>
+
 
 # *logme.php*
 ## *Popis*
@@ -112,7 +112,7 @@ Tento soubor slouží jako backendový skript pro zpracování přihlášení u�
 - Přesměrování:
   - Přesměruje uživatele na chat.php v případě úspěšného přihlášení, jinak na index.php.
 
-</br></br>
+
 
 # *logout.php*
 ## *Popis*
