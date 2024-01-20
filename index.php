@@ -64,31 +64,40 @@
                 <div class="card">
                     <div class="card-header bg-success text-white">
                         <h4>Login/Register</h4>
-                    </div>
+                        </div>
+                    <!-- Card body -->
                     <div class="card-body">
+                        <!-- Login form -->
                         <form action="login/logme.php" method="POST">
+                            <!-- Email input -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email">
                             </div>
+                            <!-- Password input -->
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password" name="password">
                             </div>
+                            <!-- Submit button -->
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-success" onclick="saveCredentials()">Login</button>
                             </div>
                         </form>
                         <br>
+                        <!-- Registration form -->
                         <form action="login/registerme.php" method="POST">
+                            <!-- Email input -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email">
                             </div>
+                            <!-- Password input -->
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password" name="password">
                             </div>
+                            <!-- Submit button -->
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-success" onclick="saveCredentials()">Register</button>
                             </div>
@@ -99,6 +108,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="text-center bg-dark text-white pb-4">
         <div class="container text-center text-md-left">
             <div class="row text-center text-md-left">
