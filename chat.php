@@ -159,29 +159,71 @@ session_start();
   </div>
 
   <script>
+    /**
+     * Odešle zprávu od uživatele do chatu.
+     *
+     * @param {string} chatId - ID chatu, do kterého se má zpráva odeslat.
+     */
     function sendMessage(chatId) {
-      const userMessage = document.getElementById(`userMessage${chatId}`).value;
-      if (userMessage.trim() !== '') {
-        const chatMessages = document.getElementById(`chatMessages${chatId}`);
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', 'sender');
-        messageDiv.textContent = userMessage;
-        chatMessages.appendChild(messageDiv);
-        document.getElementById(`userMessage${chatId}`).value = '';
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        sendMessageToOtherChat(chatId, userMessage);
-      }
+        // Získá zprávu uživatele z vstupního pole
+        const userMessage = document.getElementById(`userMessage${chatId}`).value;
+
+        // Zkontroluje, zda zpráva není prázdná
+        if (userMessage.trim() !== '') {
+            // Získá kontejner zpráv chatu
+            const chatMessages = document.getElementById(`chatMessages${chatId}`);
+
+            // Vytvoří nový div pro zprávu
+            const messageDiv = document.createElement('div');
+
+            // Přidá do divu třídy 'message' a 'sender'
+            messageDiv.classList.add('message', 'sender');
+
+            // Nastaví text divu zprávy na zprávu uživatele
+            messageDiv.textContent = userMessage;
+
+            // Přidá div zprávy do kontejneru zpráv chatu
+            chatMessages.appendChild(messageDiv);
+
+            // Vyčistí vstupní pole
+            document.getElementById(`userMessage${chatId}`).value = '';
+
+            // Posune se na dno chatu
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Odešle zprávu do druhého chatu
+            sendMessageToOtherChat(chatId, userMessage);
+        }
     }
 
+    /**
+     * Odešle zprávu od uživatele do druhého chatu.
+     *
+     * @param {string} currentChatId - ID aktuálního chatu.
+     * @param {string} message - Zpráva k odeslání.
+     */
     function sendMessageToOtherChat(currentChatId, message) {
-      const otherChatId = currentChatId === '1' ? '2' : '1';
-      const otherChatMessages = document.getElementById(`chatMessages${otherChatId}`);
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('message', 'other');
-      messageDiv.textContent = message;
-      otherChatMessages.appendChild(messageDiv);
-      otherChatMessages.scrollTop = otherChatMessages.scrollHeight;
+        // Určí ID druhého chatu
+        const otherChatId = currentChatId === '1' ? '2' : '1';
+
+        // Získá kontejner zpráv druhého chatu
+        const otherChatMessages = document.getElementById(`chatMessages${otherChatId}`);
+
+        // Vytvoří nový div pro zprávu
+        const messageDiv = document.createElement('div');
+
+        // Přidá do divu třídy 'message' a 'other'
+        messageDiv.classList.add('message', 'other');
+
+        // Nastaví text divu zprávy na zprávu
+        messageDiv.textContent = message;
+
+        // Přidá div zprávy do kontejneru zpráv druhého chatu
+        otherChatMessages.appendChild(messageDiv);
+
+        // Posune se na dno druhého chatu
+        otherChatMessages.scrollTop = otherChatMessages.scrollHeight;
     }
-  </script>
+</script>
 </body>
 </html>
