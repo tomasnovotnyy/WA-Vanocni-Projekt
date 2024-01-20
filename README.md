@@ -120,7 +120,7 @@ Tento kód je částí webové aplikace a slouží k ukončení uživatelské se
 </br>
 - session_start(): Zahájí novou nebo obnoví existující session.
 - session_destroy(): Zničí všechna data uložená v aktuální session.
-- header("Location: index.php"): Přesměruje uživatele na index.php. Ujistěte se, že soubor index.php existuje a obsahuje požadovaný obsah.
+- header("Location: index.php"): Přesměruje uživatele na index.php.
 - exit(): Ukončí běh skriptu, aby se zabránilo dalším operacím po přesměrování.
 
 # *Použité technologie*
